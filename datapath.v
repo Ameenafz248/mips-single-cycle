@@ -30,7 +30,7 @@ module datapath(input clk, reset,
 
     //ALU logic
     wire [63:0] SrcB; 
-    mux2 #(64) mux_aluop(rd2, extended_immediate, ALUSrc, SrcB);
+    mux2 #(64) mux_aluop(writedata, extended_immediate, ALUSrc, SrcB);
     alu alu_inst(.in1(rd1), .in2(SrcB), .ALUControl(ALUControl), .out(aluout), .zero(zero));
 endmodule
 
