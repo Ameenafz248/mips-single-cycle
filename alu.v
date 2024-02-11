@@ -8,7 +8,7 @@ module alu ( input [63:0] in1, in2, input [2:0] ALUControl,
         end
         else begin
             out <= in1 - in2;
-            zero <= (in1 == in2) ? 1 : 0;
+            zero <= (in1 == in2) ? 1'b1 : 1'b0;
         end
     end
 endmodule

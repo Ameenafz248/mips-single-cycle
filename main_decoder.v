@@ -11,6 +11,7 @@ module main_decoder(input [5:0] op,
         6'b000100:  control_sig <= 8'b00010001;
         6'b100011:  control_sig <= 8'b10100100;
         6'b101011:  control_sig <= 8'b01100000;
+        default:   control_sig <=  8'bxxxxxxxx;
 
     endcase
     end

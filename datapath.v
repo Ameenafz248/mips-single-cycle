@@ -13,7 +13,7 @@ module datapath(input clk, reset,
     wire [63:0] rd1, rd2, wd3;
     mux2 #(5) muxwa3(instr[20:16], instr[15:11], RegDst, wa3);
     mux2 #(64) muxwd3(aluout, readdata, MemtoReg, wd3);
-    regfile rf(.clk(clk), .ra1(instr[25:21]), .ra2(instr[20:16]), .wa3(wa3), .wd3(wd3), .rd1(rd1), .rd2(writedata));
+    regfile rf(.clk(clk), .we3(RegWrite), .ra1(instr[25:21]), .ra2(instr[20:16]), .wa3(wa3), .wd3(wd3), .rd1(rd1), .rd2(writedata));
 
     //next pc logic
     wire [63:0] extended_immediate;

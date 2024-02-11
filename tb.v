@@ -1,7 +1,6 @@
-module testbenchv1;
+module tb;
 reg clk;
 reg reset;
-integer i;
 wire [63:0] writedata, dataadr;
 wire memwrite;
 // instantiate device to be tested
